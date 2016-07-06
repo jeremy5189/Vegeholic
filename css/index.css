@@ -1,0 +1,38 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+#note {
+    background-color: #c5f5c2;
+    background-color: #ffeb7d;
+    background-color: #66a96b;
+    background-color: #fffbe0;
+    background-color: #98e19a;
+}
+.navbar {
+    background-color: #66a96b;
+}
+.navbar a {
+    color: #fffbe0;
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    background-color: #98e19a;
+}
+#logo-text {
+
+}
+#logo-leaf {
+    display: inline;
+    max-height: 21px;
+}
+.navbar-right .btn {
+    margin-top: 10px;
+}
+.navbar-right li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
