@@ -1,10 +1,6 @@
 body {
   padding-top: 50px;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
-}
 #note {
     background-color: #c5f5c2;
     background-color: #ffeb7d;
@@ -12,6 +8,7 @@ body {
     background-color: #fffbe0;
     background-color: #98e19a;
 }
+/* --------- 導覽列 --------- */
 .navbar {
     background-color: #66a96b;
 }
@@ -33,6 +30,16 @@ body {
     margin-top: 10px;
 }
 .navbar-right li {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+/* --------- 導覽列 --------- */
+#first-row {
+    margin-top: 50px;
+}
+#input-search-recipe {
+    width: 235px;
+}
+.well {
+    margin-bottom: 19px;
 }
