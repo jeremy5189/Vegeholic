@@ -1,2 +1,2 @@
-# Vfashion
-Vfashion Public Repo
+# Vegelicious
+Vegelicious Public Repo
