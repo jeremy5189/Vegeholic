@@ -1,0 +1,39 @@
+body {
+  padding-top: 50px;
+}
+#note {
+    background-color: #c5f5c2;
+    background-color: #ffeb7d;
+    background-color: #66a96b;
+    background-color: #fffbe0;
+    background-color: #98e19a;
+}
+/* --------- 導覽列 --------- */
+.navbar {
+    background-color: #66a96b;
+}
+.navbar a {
+    color: #fffbe0;
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    background-color: #98e19a;
+}
+#logo-text {
+
+}
+#logo-leaf {
+    display: inline;
+    max-height: 21px;
+}
+.navbar-right .btn {
+    margin-top: 10px;
+}
+.navbar-right li {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+/* --------- 導覽列 --------- */
+#input-search-recipe {
+    width: 235px;
+}
