@@ -39,16 +39,41 @@ img.responsive {
     padding-right: 0px;
 }
 
-#infoi {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 25%;
-  left: 36%;
-  right: 36%;
-  z-index: 10;
+#call_for_action_wrap {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    color: rgba(75, 63, 63, 0.67);
 }
-#infoi h1{
-    font-size: 60px;
-    color: white;
+#call_for_action_wrap :hover {
+    color: rgba(0, 0, 0, 1);
+}
+#cfa_title {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    transition: color 1s ease-in-out;
+    -webkit-transition: color 1s ease-in-out;
+    -moz-transition: color 1s ease-in-out;
+    -ms-transition: color 1s ease-in-out;
+     -o-transition: color 1s ease-in-out;
+}
+
+#cfa_title input {
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    font-size: 2vw;
+    text-align: center;
+}
+
+#cfa_title h1 {
+    font-size: 4.5vw;
+    text-align: center;
+    border-radius: 8px;
 }
