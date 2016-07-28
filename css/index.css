@@ -18,14 +18,23 @@ img.responsive {
     width: 100%;
     height: auto;
     max-height: 480px;
-    min-height: 240px;
 }
+
+@media screen and (max-width: 992px ) {
+    #call_for_action_wrap {
+        display: none;
+    }
+}
+
 #input-search-recipe {
     width: 235px;
 }
+
 .well {
-    margin-bottom: 19px;
+    margin-bottom: 0px;
+    border-radius: 0px;
 }
+
 #second-row {
     margin-top: 30px;
 }
@@ -42,7 +51,9 @@ img.responsive {
     box-shadow: inset 0 1px 1px rgba(0,0,0,.05)
 }
 #footer-row {
-    margin-top: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 #footer-col {
     padding-left: 0px;
