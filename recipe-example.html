@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,48 +23,49 @@
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/recipe.css">
-  </head>
+</head>
 
-  <body>
+<body>
 
     <!-- 導覽列 -->
     <nav class="navbar navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-          <a class="navbar-brand" href="#">
-              <img src="img/leaf.svg" id="logo-leaf" alt="">
-              <span id="logo-text">全植食尚</span>
-          </a>
+                <a class="navbar-brand" href="#">
+                    <img src="img/leaf.svg" id="logo-leaf" alt="">
+                    <span id="logo-text">全植食尚</span>
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="recipe.html">食譜</a></li>
+                    <li><a href="#blog.html">食記</a></li>
+                    <li><a href="#market.html">市集</a></li>
+                    <li><a href="#video.html">教學影片</a></li>
+                    <li><a href="#activity.html">活動</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button class="btn btn-default btn-sm">登入</button>
+                    </li>
+                    <li id="sep"></li>
+                    <li>
+                        <button class="btn btn-primary btn-sm">註冊</button>
+                    </li>
+                </ul>
+
+            </div>
+            <!--/.nav-collapse -->
+
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="recipe.html">食譜</a></li>
-            <li><a href="#blog.html">食記</a></li>
-            <li><a href="#market.html">市集</a></li>
-            <li><a href="#video.html">教學影片</a></li>
-            <li><a href="#activity.html">活動</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-                <button class="btn btn-default btn-sm">登入</button>
-            </li>
-            <li id="sep"></li>
-            <li>
-                <button class="btn btn-primary btn-sm">註冊</button>
-            </li>
-          </ul>
-
-        </div><!--/.nav-collapse -->
-
-      </div>
     </nav>
 
     <!-- 頁面內容 Wrapper -->
@@ -75,37 +77,37 @@
 
                 <div class="panel panel-default">
 
-                  <!-- Default panel contents -->
-                  <div class="panel-heading">塔香烏龍麵
-                  <button class="btn btn-xs btn-warning pull-right"><span class="glyphicon glyphicon-pencil"></span> Linda</button>
-                  </div>
-                  <div class="panel-body">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">塔香烏龍麵
+                        <button class="btn btn-xs btn-warning pull-right"><span class="glyphicon glyphicon-pencil"></span> Linda</button>
+                    </div>
+                    <div class="panel-body">
 
-                    <div class="row">
-                        <div class="col-md-8">
-                            <img src="http://placehold.it/400" alt="">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">食材</div>
-                                <div class="panel-body">
-                                    <ul>
-                                        <li>番茄</li>
-                                        <li>塔塔醬</li>
-                                        <li>烏龍麵</li>
-                                    </ul>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <img src="http://placehold.it/400" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">食材</div>
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>番茄</li>
+                                            <li>塔塔醬</li>
+                                            <li>烏龍麵</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
-                  </div>
-
-                  <!-- List group -->
-                  <ul class="list-group">
-                    <li class="list-group-item">分類: 食物、你好</li>
-                    <li class="list-group-item">發表: 2016/07/02</li>
-                  </ul>
+                    <!-- List group -->
+                    <ul class="list-group">
+                        <li class="list-group-item">分類: 食物、你好</li>
+                        <li class="list-group-item">發表: 2016/07/02</li>
+                    </ul>
                 </div>
 
             </div>
@@ -115,16 +117,16 @@
 
                 <div class="well">
                     <form class="form-inline">
-                      <div class="form-group">
-                        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                        <div class="input-group">
-                          <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
-                          <input type="text" class="form-control" id="input-search-recipe" placeholder="食譜搜尋">
-                          <span class="input-group-btn">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+                                <input type="text" class="form-control" id="input-search-recipe" placeholder="食譜搜尋">
+                                <span class="input-group-btn">
                               <button class="btn btn-primary" type="button">Go!</button>
                           </span>
+                            </div>
                         </div>
-                      </div>
                     </form>
                 </div>
 
@@ -143,7 +145,8 @@
             </div>
         </div>
 
-    </div><!-- /.container -->
+    </div>
+    <!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -151,5 +154,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
-  </body>
+</body>
+
 </html>
