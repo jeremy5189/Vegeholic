@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>食譜 | 全植食尚</title>
+    <title>食譜 | 全植時尚 Vegeholic</title>
 
     <!-- Bootstrap core CSS -->
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 <body>
 
     <!-- 導覽列 -->
-    <nav class="navbar navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top" id="navbar-wrap">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,33 +38,24 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="img/leaf.svg" id="logo-leaf" alt="">
-                    <span id="logo-text">全植食尚</span>
+                    <span id="logo-text">{{ system_name }}</span>
                 </a>
             </div>
+
             <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="recipe.html">食譜</a></li>
-                    <li><a href="#blog.html">食記</a></li>
-                    <li><a href="#market.html">市集</a></li>
-                    <li><a href="#video.html">教學影片</a></li>
-                    <li><a href="#activity.html">活動</a></li>
+                <ul class="nav navbar-nav" v-for="button in buttons">
+                    <li><a href="{{ button.links }}">{{ button.title }}</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <button class="btn btn-default btn-sm">登入</button>
-                    </li>
-                    <li id="sep"></li>
-                    <li>
-                        <button class="btn btn-primary btn-sm">註冊</button>
-                    </li>
+                    <li><a href="#login.html">登入</a></li>
+                    <li><a href="#register.html">註冊</a></li>
                 </ul>
 
             </div>
             <!--/.nav-collapse -->
-
         </div>
     </nav>
 
@@ -154,6 +145,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/vue.min.js"></script>
+    <script src="js/view-common.js"></script>
 </body>
 
 </html>
