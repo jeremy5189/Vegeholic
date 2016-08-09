@@ -82,3 +82,15 @@ body {
 .custom-row .col-md-3 {
     text-align: center;
 }
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.loading-icon {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/sys/cube.gif) center no-repeat #fff;
+}
