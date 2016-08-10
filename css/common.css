@@ -55,6 +55,7 @@ body {
 
     margin-right: 0.8em;
     max-width: 25px;
+    min-height: 25px;
 
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;

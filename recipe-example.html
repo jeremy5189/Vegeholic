@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>食譜 | 全植時尚 Vegeholic</title>
+    <title>食譜 | 全植食尚 Vegeholic</title>
 
     <!-- Bootstrap core CSS -->
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
@@ -26,10 +26,12 @@
 </head>
 
 <body>
+    <div class="loading-icon"></div>
 
     <!-- 導覽列 -->
     <nav class="navbar navbar-fixed-top" id="navbar-wrap">
         <div class="container">
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -65,88 +67,136 @@
         <div class="row" id="first-row">
 
             <div class="col-md-8">
-
                 <div class="panel panel-default">
-
-                    <!-- Default panel contents -->
-                    <div class="panel-heading">塔香烏龍麵
-                        <button class="btn btn-xs btn-warning pull-right"><span class="glyphicon glyphicon-pencil"></span> Linda</button>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">蘇維埃香菇雞肉炒麵</h3>
                     </div>
                     <div class="panel-body">
 
                         <div class="row">
-                            <div class="col-md-8">
-                                <img src="http://placehold.it/400" alt="">
+
+                            <div class="col-md-7">
+                                <img src="img/slide-1.jpg" class="recipe-img" alt="">
                             </div>
-                            <div class="col-md-4">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">食材</div>
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>番茄</li>
-                                            <li>塔塔醬</li>
-                                            <li>烏龍麵</li>
-                                        </ul>
-                                    </div>
+
+                            <div class="col-md-5">
+                                <!-- 作者資訊 -->
+                                <div class="panel panel-default panel-author">
+                                  <div class="panel-heading">
+                                      <div class="row">
+                                          <div class="col-sm-2">
+                                              <img class="avatar" src="ussr.png" alt="avatar" />
+                                          </div>
+                                          <div class="col-sm-10">
+                                              <p class="author-info">蘇維埃共產黨
+                                              <br/>
+                                              204 食譜 | 1888 黨員</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- List group -->
+                                  <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                        <span class="view-count count">2,705</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="glyphicon glyphicon-heart"></span>
+                                        <span class="like-count count">90</span>
+                                        <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-heart"></button>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="glyphicon glyphicon-comment"></span>
+                                        <span class="reply-count count">5</span>
+                                        <button class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-comment"></button>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        <span class="recipe-date count">2016.08.02</span>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="recipe-desc">
+                            1950 年代，匈牙利的三明治和蘇聯的三明治有什麼不同呢？匈牙利的三明治是：麵包、麵包、中間再夾一片麵包。蘇聯的三明治是：麵包兌換券、麵包兌換券、中間再夾一張火腿兌換券
+                        </p>
+
+                        <!-- 食材 -->
+                        <div class="row" id="ingredient">
+                            <div class="col-md-12">
+                                <div class="panel panel-info">
+                                  <div class="panel-heading">食材列表</div>
+                                      <ul class="list-group">
+                                        <li class="list-group-item">
+                                            香菇兌換卷
+                                            <span class="badge pull-right">3張</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            雞肉兌換卷
+                                            <span class="badge pull-right">5張</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            乾麵團兌換卷
+                                            <span class="badge pull-right">1張</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <del>美帝主義</del>檸檬兌換卷
+                                            <span class="label label-danger">政治不正確警告</span>
+                                            <span class="badge pull-right">1張</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            馬克思共產調味料
+                                            <span class="badge pull-right">5g</span>
+                                        </li>
+                                      </ul>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-
-                    <!-- List group -->
                     <ul class="list-group">
-                        <li class="list-group-item">分類: 食物、你好</li>
-                        <li class="list-group-item">發表: 2016/07/02</li>
+                      <li class="list-group-item recipe-step" id="recipe-step" v-for="step in steps">
+                          <div class="row">
+                              <div class="col-md-4">
+                                <img src="{{ step.img }}" class="recipe-img" alt="">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="page-header">步驟 {{ step.order }}</div>
+                                <p class="step-text">{{ step.text }}</p>
+                              </div>
+                          </div>
+                      </li>
                     </ul>
                 </div>
-
             </div>
-
 
             <div class="col-md-4">
-
-                <div class="well">
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                            <div class="input-group">
-                                <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
-                                <input type="text" class="form-control" id="input-search-recipe" placeholder="食譜搜尋">
-                                <span class="input-group-btn">
-                              <button class="btn btn-primary" type="button">Go!</button>
-                          </span>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <img class="ads" src="http://placehold.it/360x300&text=%E5%93%81%E7%89%8C%E5%BB%9A%E6%88%BF+360x300" alt="">
-
-
-            </div>
-
-        </div>
-
-        <div class="row" id="footer-row">
-            <div class="col-md-12">
-                <div class="well">
-                    &copy; 2016 - 2017 全植食尚 GmbH All rights Reserved.
-                </div>
+                <div class="well ads"></div>
+                <div class="well ads"></div>
+                <div class="well ads"></div>
             </div>
         </div>
 
     </div>
     <!-- /.container -->
 
+    <div class="row" id="footer-row">
+        <div class="col-md-12 well">
+            &copy; 2016 - 2017 全植食尚 GmbH All rights Reserved.
+        </div>
+    </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="lib/js/jquery.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/vue.min.js"></script>
     <script src="js/view-common.js"></script>
+    <script src="js/view-recipe-page.js"></script>
 </body>
 
 </html>
