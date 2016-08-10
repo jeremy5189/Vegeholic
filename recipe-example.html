@@ -66,110 +66,103 @@
 
         <div class="row" id="first-row">
 
+            <!-- Recipe Main -->
             <div class="col-md-8">
-                <div class="panel panel-default">
+
+                <div class="panel panel-default" id="recipe-panel">
+
                     <div class="panel-heading">
-                        <h3 class="panel-title">蘇維埃香菇雞肉炒麵</h3>
+                        <h3 class="panel-title">{{ info.name }}</h3>
                     </div>
+
                     <div class="panel-body">
 
                         <div class="row">
 
+                            <!-- Recipe Main Image -->
                             <div class="col-md-7">
-                                <img src="img/slide-1.jpg" class="recipe-img" alt="">
+                                <img src="{{ info.img_link }}" class="recipe-img" alt="">
                             </div>
 
                             <div class="col-md-5">
+
                                 <!-- 作者資訊 -->
                                 <div class="panel panel-default panel-author">
-                                  <div class="panel-heading">
-                                      <div class="row">
-                                          <div class="col-sm-2">
-                                              <img class="avatar" src="ussr.png" alt="avatar" />
-                                          </div>
-                                          <div class="col-sm-10">
-                                              <p class="author-info">蘇維埃共產黨
-                                              <br/>
-                                              204 食譜 | 1888 黨員</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <!-- List group -->
-                                  <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                        <span class="view-count count">2,705</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="glyphicon glyphicon-heart"></span>
-                                        <span class="like-count count">90</span>
-                                        <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-heart"></button>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="glyphicon glyphicon-comment"></span>
-                                        <span class="reply-count count">5</span>
-                                        <button class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-comment"></button>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                        <span class="recipe-date count">2016.08.02</span>
-                                    </li>
-                                  </ul>
+
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <img class="avatar" src="{{ info.author.avatar }}" alt="avatar" />
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <p class="author-info">
+                                                    {{ info.author.name }}
+                                                    <br/> {{ info.author.recipe_count }} 食譜 | {{ info.author.recipe_count }} 黨員
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- List group -->
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span class="glyphicon glyphicon-eye-open"></span>
+                                            <span class="view-count count">{{ info.stat.view }}</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="glyphicon glyphicon-heart"></span>
+                                            <span class="like-count count">{{ info.stat.like }}</span>
+                                            <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-heart"></button>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            <span class="reply-count count">{{ info.stat.reply }}</span>
+                                            <button class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-comment"></button>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                            <span class="recipe-date count">{{ info.stat.date }}</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
 
                         <p class="recipe-desc">
-                            1950 年代，匈牙利的三明治和蘇聯的三明治有什麼不同呢？匈牙利的三明治是：麵包、麵包、中間再夾一片麵包。蘇聯的三明治是：麵包兌換券、麵包兌換券、中間再夾一張火腿兌換券
+                            {{ text }}
                         </p>
 
                         <!-- 食材 -->
                         <div class="row" id="ingredient">
                             <div class="col-md-12">
-                                <div class="panel panel-info">
-                                  <div class="panel-heading">食材列表</div>
-                                      <ul class="list-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">食材列表</div>
+                                    <ul class="list-group" v-for="ingredient in ingredients">
                                         <li class="list-group-item">
-                                            香菇兌換卷
-                                            <span class="badge pull-right">3張</span>
+                                            {{{ ingredient.item }}}
+                                            <span class="badge pull-right">{{ ingredient.amount }}</span>
                                         </li>
-                                        <li class="list-group-item">
-                                            雞肉兌換卷
-                                            <span class="badge pull-right">5張</span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            乾麵團兌換卷
-                                            <span class="badge pull-right">1張</span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <del>美帝主義</del>檸檬兌換卷
-                                            <span class="label label-danger">政治不正確警告</span>
-                                            <span class="badge pull-right">1張</span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            馬克思共產調味料
-                                            <span class="badge pull-right">5g</span>
-                                        </li>
-                                      </ul>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                     <ul class="list-group">
-                      <li class="list-group-item recipe-step" id="recipe-step" v-for="step in steps">
-                          <div class="row">
-                              <div class="col-md-4">
-                                <img src="{{ step.img }}" class="recipe-img" alt="">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="page-header">步驟 {{ step.order }}</div>
-                                <p class="step-text">{{ step.text }}</p>
-                              </div>
-                          </div>
-                      </li>
+                        <li class="list-group-item recipe-step" v-for="step in steps">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="{{ step.img }}" class="recipe-img" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="page-header">步驟 {{ step.order }}</div>
+                                    <p class="step-text">{{ step.text }}</p>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
+
             </div>
 
             <div class="col-md-4">
