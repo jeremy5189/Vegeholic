@@ -1,6 +1,49 @@
-body {
-  padding-top: 50px;
+* {
+    font-family: 'Raleway', Helvetica, 'Source Han Sans TC', 'Open Sans Han TWHK',
+        'Noto Sans CJK TC', 'Noto Sans T Chinese', 'Source Han Sans TC',
+        '黑體-繁', 'Heiti TC', '蘋果儷中黑', 'Apple LiGothic Medium',
+        '微軟雅黑', 'Microsoft YaHei ', '微軟正黑體', 'Microsoft JhengHei',
+        '文泉驛微米黑', 'WenQuanYi Micro Hei', '文泉驛正黑',
+        'Droid Sans', 'Droid Sans Fallback',
+        sans-serif !important;
 }
+
+#great_navbar .navbar  {
+    margin-bottom: 0px;
+}
+#great_navbar .navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+#great_navbar .navbar .navbar-collapse {
+  text-align: center;
+}
+#great_navbar li a {
+    color: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+#great_navbar {
+    height: 13em;
+}
+#page_title {
+    font-family: 'Playball', cursive !important;
+    padding-top: 0.5em;
+    text-align: center;
+    font-size: 4.0em;
+    font-weight: 800;
+    color: #66a96b;
+    text-transform: capitalize;;;
+}
+#great_navbar hr {
+    margin-top: 7px;
+    margin-bottom: 0px;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
 #note {
     background-color: #c5f5c2;
     background-color: #ffeb7d;
@@ -9,14 +52,14 @@ body {
     background-color: #98e19a;
 }
 /* --------- 導覽列 --------- */
-.navbar {
+#sticky_navbar {
     background-color: #66a96b;
 }
-.navbar a {
+#sticky_navbar a {
     color: #fffbe0;
 }
-.navbar-nav > li > a:hover,
-.navbar-nav > li > a:focus {
+#sticky_navbar .navbar-nav > li > a:hover,
+#sticky_navbar .navbar-nav > li > a:focus {
     background-color: #98e19a;
 }
 #logo-text {
@@ -26,10 +69,10 @@ body {
     display: inline;
     max-height: 21px;
 }
-.navbar-right .btn {
+#sticky_navbar .navbar-right .btn {
     margin-top: 10px;
 }
-.navbar-right li {
+#sticky_navbar .navbar-right li {
     margin-left: 3px;
     margin-right: 3px;
 }
